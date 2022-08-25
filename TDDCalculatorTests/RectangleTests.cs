@@ -11,9 +11,11 @@ namespace TDDCalculatorTests
         public void CalculateRectangleArea_CorrectlyReturnsArea(decimal length, decimal width, decimal expected)
         {
             //Arrange
-
+            var rectangle = new Rectangle();
+            rectangle.Width = width;
+            rectangle.Length = length;
             //Act
-            var results = Rectangle.CalculateRectangleArea(length, width);
+            var results = rectangle.CalculateRectangleArea(rectangle);
 
             //Assert
             Assert.Equal(expected, results);
@@ -26,9 +28,12 @@ namespace TDDCalculatorTests
         public void CalculateRectanglePerimeter_CorrectlyReturnsPerimeter(decimal length, decimal width, decimal expected)
         {
             //Arrange
-
+            var rectangle = new Rectangle();
+            rectangle.Width = width;
+            rectangle.Length = length;
             //Act
-            var results = Rectangle.CalculateRectanglePerimeter(length, width);
+            var results = rectangle.CalculateRectanglePerimeter(rectangle);
+
 
             //Assert
             Assert.Equal(expected, results);

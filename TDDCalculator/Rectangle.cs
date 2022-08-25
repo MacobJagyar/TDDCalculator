@@ -1,23 +1,23 @@
 ﻿using System;
 namespace TDDCalculator
 {
-    public static class Rectangle
+    public class Rectangle
     {
-        public static decimal Length { get; set; }
-        public static decimal Width { get; set; }
+        public decimal Length { get; set; }
+        public decimal Width { get; set; }
 
 
 
-        public static decimal CalculateRectangleArea(decimal length,decimal width)
+        public decimal CalculateRectangleArea(Rectangle a)
         {
 
-            return length * width;
+            return a.Length * a.Width;
         }
 
-        public static decimal CalculateRectanglePerimeter(decimal length, decimal width)
+        public decimal CalculateRectanglePerimeter(Rectangle a)
         {
 
-            return 2*(length + width);
+            return 2*(a.Length + a.Width);
         }
 
     }
